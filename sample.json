@@ -1,13 +1,15 @@
 {
   "start_url" : "http://localhost:3000",
   "key_xpath" : "//li[class='business_record']",
-  "name" : "",
-  "addr_1" : "",
-  "addr_2" : "",
-  "city" : "",
-  "state" : "",
-  "zip" : "",
-  "phone_num" : "",
-  "email_address" : "",
-  "contact_name" : ""
+  "business_data" : {
+    "name" : "",
+    "addr_1" : "",
+    "addr_2" : "",
+    "city" : "",
+    "state" : "",
+    "zip" : "",
+    "phone_num" : "",
+    "email_address" : "",
+    "contact_name" : ""
+  }
 }
