@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.common.exceptions import NoSuchElementException
 
 class WebScraper():
     def __init__(self, json_dict):
@@ -19,7 +20,10 @@ class WebScraper():
             for entry in entries:
                 result = {}
                 for key in self.params['business_data']:
-                    result[key] = entry.find_element_by_xpath(self.params['business_data'][key]).text
+                    try:
+                        result[key] = entry.find_element_by_xpath(self.params['business_data'][key]).text
+                    except NoSuchElementException:
+                        result[key] = ''
                 results[url_post + str(entries.index(entry))] = result
         self.driver.quit()
         return results
