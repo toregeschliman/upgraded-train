@@ -1,15 +1,9 @@
 {
-  "start_url" : "http://localhost:3000",
-  "key_xpath" : "//li[class='business_record']",
+  "start_url" : "http://business.northcenterchamber.com/list/searchalpha/a",
+  "key_xpath" : "//div[@class='mn-listingcontent']",
   "business_data" : {
-    "name" : "",
-    "addr_1" : "",
-    "addr_2" : "",
-    "city" : "",
-    "state" : "",
-    "zip" : "",
-    "phone_num" : "",
-    "email_address" : "",
-    "contact_name" : ""
+    "name" : ".//div[@itemprop='name']",
+    "addr" : ".//div[@itemprop='address']",
+    "phone_num" : ".//li[@class='mn-phone']"
   }
 }
