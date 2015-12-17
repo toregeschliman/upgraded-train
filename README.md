@@ -6,4 +6,4 @@ To get stuff:
 
 > python generic_request.py --jsonsource `filename` --server `server-path`
 
-jsonsource defaults to sample.json in the same directory. server defaults to my server endpoint until January, then you can override it once you get the server scripts running locally.  Or tell me when you want to do some work and I can spin it back up.
+jsonsource defaults to sample.json in the same directory. server defaults to my server endpoint until January, then you can override it once you get the server scripts running locally somewhere.  Or tell me when you want to do some work and I can spin it back up.

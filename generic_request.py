@@ -23,15 +23,17 @@ def main():
     parser.add_argument('--server', dest='config_url',
                         default='http://toregesquire.com/steve',
                         help='URL of scraping API endpoint')
+    parser.add_argument('--csv', dest='destination',
+                        default='export.csv', help='path to write CSV to (default=export.csv)')
     config = parser.parse_args().source
     config_url = parser.parse_args().config_url
+    destination = parser.parse_args().destination
 
     with open(config, 'r') as f:
         data = json.load(f)
 
     req = requests.post(config_url, json=data)
-    TurnJson(req.json()).IntoCsv()
-    print req.json()
+    TurnJson(req.json()).IntoCsv(destination)
 
 if __name__=='__main__':
     main()
