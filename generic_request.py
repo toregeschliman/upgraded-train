@@ -10,7 +10,7 @@ class TurnJson():
         result = ''
         for key in self.json_obj:
             for key_2 in self.json_obj[key]:
-                result += (self.json_obj[key][key_2])
+                result += (self.json_obj[key][key_2]).encode('ascii', 'replace')
                 result += (',')
             result += ('\n')
         with open(filepath, 'w') as f:
