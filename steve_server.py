@@ -11,4 +11,4 @@ def get_contents_from_xpaths():
     return jsonify(**scraper.scrape())
 
 if __name__ == '__main__':
-    app.run('0.0.0.0:80')
+    app.run(host='0.0.0.0', port=80)
